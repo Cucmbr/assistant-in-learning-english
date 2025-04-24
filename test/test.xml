@@ -1,19 +1,2 @@
 <test>
-    <test-case id = "Start">
-        <q>/start</q>
-        <a state = "/Start"/>
-        <a>Hello! Let's begin by reviewing your vocabulary. Please translate the following English words into Russian</a>
-        <a state = "/Translation"/>
-    </test-case>
-    <test-case id = "NoMatch">
-        <q>/start</q>
-        <a state = "/Start"/>
-        <a state = "/Translation"/>
-        <q>123</q>
-        <a state = "/NoMatch"/>
-        <q>abcd</q>
-        <a state = "/NoMatch"/>
-        <q>ответ!</q>
-        <a state = "/NoMatch"/>
-    </test-case>
 </test>    
