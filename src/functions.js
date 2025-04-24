@@ -15,7 +15,22 @@ function getMeanings(word) {
             meanings[i] = firstWord.meanings[i].translation.text;
         }
     }
-    log("!THE MEANINGS ARE: " + meanings);
     
-    return meanings;
+    log("!THE MEANINGS ARE: " + meanings);
+    var result = []
+    
+    for (var i = 0; i < 5; i++) {
+        if (meanings[i]) {
+            var temp = meanings[i].split(/(?:, |; )/);
+            for (var j = 0; j < temp.length; j++) {
+                result.push(temp[j]);
+            }
+        }
+    }
+    
+    result = result.slice(0, 5);
+    
+    log("!THE MEANINGS ARE: " + result);
+    
+    return result;
 }
